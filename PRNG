@@ -1,2 +1,4 @@
 def is_correct(PRNG):
-    return True 
+    prng = PRNG(33, 11)
+    i = prng.next_int()
+    return True
