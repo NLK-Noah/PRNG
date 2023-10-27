@@ -14,7 +14,7 @@ def import_file(x):
 
     """
     filename = input("chosse file:")
-    questions = qcm.build_questionnaire(filename)
+    questions = qcm.build_questionnaire(filename) #sérieuc ça marche juste comme ça ???????
     return questions
     
 
@@ -27,7 +27,7 @@ def choix_cotation():
         Un Entier entre 1 et 4 
 
     Returns:
-            "C", étant la méthode de cotation choisie
+        "C", étant la méthode de cotation choisie
             
     """
 def shuffle():
@@ -77,8 +77,11 @@ def feedback():
     Cette fonction permet d'afficher la cote selon la méthode choisie et des feedback sur les éventuelles erreurs
 
     Args:
+        récupère les feedback dans le fichier qcm.py
+        les  réponses aux questions et si y en a un qui en à bon et qui a un feedback 
 
     Returns:
+        return le feedback de la question mauvaise 
             
     """
 def main():
@@ -94,11 +97,8 @@ def main():
 # 4 ) Afficher les questions du QCM
     show_qr()
 # 5) Correction du QCM.
-    
+    correction()
 # 6 )  Sortie du Feedback avec les cotations.
-
-
-
-
+    feedback()
 #if __name__ == "__main__":
 main()
