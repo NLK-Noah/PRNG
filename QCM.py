@@ -30,6 +30,17 @@ def choix_cotation():
             "C", étant la méthode de cotation choisie
             
     """
+def shuffle():
+    """Randomise les questions 
+    
+    Cette fonction permet de mélanger les questions pour quelle soit donnés dans différent ordre 
+
+    Args:
+        Les questions et les réponses  différentes 
+
+    Return:
+        Les question aléatoires et les réponses alétoire
+    """
 
 
 
@@ -44,6 +55,9 @@ def show_qr():
     Return:
             Les questions et les réponses possibles
     
+    """
+
+def correction():
     """
 
 
