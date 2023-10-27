@@ -1,0 +1,21 @@
+def main():
+    
+# 1)  Choix de cotation:
+
+
+# 2 ) Integrer le QCM.
+
+
+# 3 ) Shuffle QCM.
+
+
+# 4 ) Correction du QCM.
+
+
+# 5 )  Sortie du Feedback avec les cotations.
+
+
+
+
+#if __name__ == "__main__":
+main()
