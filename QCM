@@ -1,7 +1,20 @@
+def choix_cotation():
+    """Permet de choisir un choix de Cotation
+
+    Cette fontion permet de choisir une méthode de cotation parmi les suivantes: 1| Cool, 2| Sévère, 3| Anti-Hasard, 4| Toutes 
+
+    Args:
+        Un Entier entre 1 et 4 
+
+    Returns:
+            "C", étant la méthode de cotation choisie
+    """
+
+
 def main():
     
 # 1)  Choix de cotation:
-
+    choix_cotation()
 
 # 2 ) Integrer le QCM.
 
