@@ -61,7 +61,9 @@ def correction():
     """
     """
 
-    
+def feedback():
+    """
+    """
 def main():
     
 # 1) Integrer le QCM.
