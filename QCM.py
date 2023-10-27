@@ -43,7 +43,6 @@ def shuffle():
     """
 
 
-
 def show_qr():
     """Permet d'afficher les questions
 
@@ -62,7 +61,14 @@ def correction():
     """
 
 def feedback():
-    """
+    """Permet d'avoir un feedback
+
+    Cette fonction permet d'afficher la cote selon la méthode choisie et des feedback sur les éventuelles erreurs
+
+    Args:
+
+    Returns:
+            
     """
 def main():
     
