@@ -1,4 +1,5 @@
 import qcm
+import random
 
 def import_file(x):
     """Permet d'importer le QCM
@@ -11,10 +12,10 @@ def import_file(x):
     Returns:
             Le QCM desiré
 
-    
     """
     filename = input("chosse file:")
     questions = qcm.build_questionnaire(filename)
+    return questions
     
 
 def choix_cotation():
@@ -27,29 +28,40 @@ def choix_cotation():
 
     Returns:
             "C", étant la méthode de cotation choisie
+            
     """
 
 
+
+def show_qr():
+    """Permet d'afficher les questions
+
+    Cette fonction permet d'afficher les questions et les réponses possibles du QCM
+
+    Args:
+        Questions 
+        Réponses
+    Return:
+            Les questions et les réponses possibles
+    
+    """
+
+
+    
 def main():
     
 # 1) Integrer le QCM.
     import_file()
 
-
-# 2 ) Choix de cotation:
-        choix_cotation()
-
-    
+# 2 ) Choix de cotation.
+    choix_cotation()
 
 # 3 ) Shuffle QCM.
-
-
+    shuffle()
 # 4 ) Afficher les questions du QCM
-
-
+    show_qr()
 # 5) Correction du QCM.
-
-
+    
 # 6 )  Sortie du Feedback avec les cotations.
 
 
