@@ -57,7 +57,18 @@ def show_qr():
     """
 
 def correction():
-    """
+    """Permet d'avoir la cote reçue sur le QCM 
+    
+    Cette fonction permet de calculer le nombres de points obtenu par l'utilisateur selon son choix de cotatiion 
+
+    Args:
+        les réponses de l'utilisateur lors du QCM 
+        les réponses correctes du QCM 
+        les méthodes de correction 
+
+    Return:
+        les points obtenus par l'utilisateur lors du QCM selon son choix de cotation 
+        
     """
 
 def feedback():
