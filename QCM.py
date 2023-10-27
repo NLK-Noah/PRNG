@@ -59,7 +59,7 @@ def show_qr():
 
 def correction():
     """
-
+    """
 
     
 def main():
