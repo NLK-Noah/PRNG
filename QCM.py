@@ -1,20 +1,21 @@
+import qcm
+
 def import_file(x):
     """Permet d'importer le QCM
 
-    Cette Fonction importe le QCM desiré
+    Cette Fonction importe le QCM desiré 
 
-    
+    Args:
+        input: Filename un nom de fichier 
 
-    
+    Returns:
+            Le QCM desiré
+
     
     """
-    x = input("chosse file:")
-    file = open(x,"r")
-    s = file.read()
-    file.close()
-
-
-
+    filename = input("chosse file:")
+    questions = qcm.build_questionnaire(filename)
+    
 
 def choix_cotation():
     """Permet de choisir un choix de Cotation
@@ -32,7 +33,6 @@ def choix_cotation():
 def main():
     
 # 1) Integrer le QCM.
-    choose_file()
     import_file()
 
 
