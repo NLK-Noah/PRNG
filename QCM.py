@@ -58,7 +58,7 @@ def shuffle():
     #Il faut chercher le tuple avec les 4 reponses et les transformer en liste
     listeq.append(#Liste des reponses)
     listeq.shuffle()
-    
+    return listeq 
 
 
 def show_qr():
@@ -72,8 +72,8 @@ def show_qr():
     Return:
             Les questions et les réponses possibles
     
-    """
-    #Un print qui affiche la position 0 de la liste 1 et les questions 
+    """ 
+    print(listeq)
     
 
 def correction():
