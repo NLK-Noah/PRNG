@@ -30,9 +30,9 @@ def choix_cotation():
         "C", étant la méthode de cotation choisie
 
     """
-    print("Choisissez votre méthode de cotation:\n1| Cool.\n2| Sévère.\n3| Anti-Hasard.\n4| Toutes.")
+    print("Choisissez votre méthode de cotation:\n1| Cool.\n2| Sévère.\n3| Anti-Hasard.\n4| Toutes.") #Affiche les diffférents types de cotations
     cotation = input("Entrez votre méthode de cotation:")
-    x = cotation.lower()
+    x = cotation.lower() #Force l'input à être en minuscule pour éviter les erreurs 
     if x == "cool" or "1":
         cotation_cool()
     elif x == "severe" or "sévere" or "sevère" or "sévère" or "2":
@@ -68,6 +68,7 @@ def show_qr():
             Les questions et les réponses possibles
     
     """
+    
 
 def correction():
     """Permet d'avoir la cote reçue sur le QCM 
