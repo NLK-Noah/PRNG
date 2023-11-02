@@ -13,7 +13,7 @@ def import_file(x):
             Le QCM desiré
 
     """
-    filename = input("chosse file:")
+    filename = input("Choose file:")
     questions = qcm.build_questionnaire(filename) #sérieuc ça marche juste comme ça ???????
     return questions
     
