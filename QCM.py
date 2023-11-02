@@ -28,8 +28,21 @@ def choix_cotation():
 
     Returns:
         "C", étant la méthode de cotation choisie
-            
+
     """
+    print("Choisissez votre méthode de cotation:\n1| Cool.\n2| Sévère.\n3| Anti-Hasard.\n4| Toutes.")
+    cotation = input("Entrez votre méthode de cotation:")
+    x = cotation.lower()
+    if x == "cool" or "1":
+        cotation_cool()
+    elif x == "severe" or "sévere" or "sevère" or "sévère" or "2":
+        cotation_severe()
+    elif x == "antihasard" or "anti-hasard" or "anti hasard" or "anti_hasard" or "3":
+        cotation_antihasard()
+    elif x == "toutes" or "4":
+        cotation_tout()
+        
+
 def shuffle():
     """Randomise les questions 
     
