@@ -84,6 +84,28 @@ def correction():
         les points obtenus par l'utilisateur lors du QCM selon son choix de cotation 
         
     """
+    def correction_cool():
+        count_cool == 0
+        for i in range(#questions):
+            if #reponse == list[i]:
+                count_cool += 1
+    def correction_severe():
+        count_severe == 0
+        for i in range(#questions)
+            if #reponse == list[i]:
+                count_severe += 1
+            else:
+                count_severe -= 1
+    def correction_anti_hasard():
+         count_noluck == 0
+
+    def correction_tout():
+        correction_cool()
+        print("Cotation 'Cool':",count_cool)
+        correction_severe()
+        print("Cotation 'Sévère':",count_severe)
+        correction_anti_hasard()
+        print("Cotation 'Anti_Hasard':",count_noluck)
 
 def feedback():
     """Permet d'avoir un feedback
