@@ -126,14 +126,15 @@ def feedback():
         return le feedback de la question mauvaise 
             
     """
+    
+
+
 def main():
     
 # 1) Integrer le QCM.
     import_file()
-
 # 2 ) Choix de cotation.
     choix_cotation()
-
 # 3 ) Shuffle QCM.
     shuffle()
 # 4 ) Afficher les questions du QCM
