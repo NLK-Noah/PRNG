@@ -55,11 +55,10 @@ def shuffle():
         Les question aléatoires et les réponses alétoire
     """
     listeq = []
-    #Il faut chercher le tuple avec les 4 reponses et les transformer en liste
-    listeq.append(#Liste des reponses)
-    listeq.shuffle()
-    return listeq 
+    for i in range(len#Nombre de qquestions):
+        listeq.append(question[i][1][
 
+        
 
 def show_qr():
     """Permet d'afficher les questions
@@ -73,7 +72,12 @@ def show_qr():
             Les questions et les réponses possibles
     
     """ 
-    print(listeq)
+    for i in range(len(questions)):
+        print(questions[i][0])
+        print("1|", questions[i][1][0][0])
+        print("2|", questions[i][1][1][0])
+        print("3|", questions[i][1][2][0])
+
     
 
 def correction():
