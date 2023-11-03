@@ -41,29 +41,12 @@ def choix_cotation():
         cotation_antihasard()
     elif x == "toutes" or "4":
         cotation_tout()
-        
+               
 
-def shuffle():
-    """Randomise les questions 
-    
-    Cette fonction permet de mélanger les questions pour quelle soit donnés dans différent ordre 
-
-    Args:
-        Les questions et les réponses  différentes 
-
-    Return:
-        Les question aléatoires et les réponses alétoire
-    """
-    listeq = []
-    for i in range(len#Nombre de qquestions):
-        listeq.append(question[i][1][
-
-        
-
-def show_qr():
+def show_qr_shuffled():
     """Permet d'afficher les questions
 
-    Cette fonction permet d'afficher les questions et les réponses possibles du QCM
+    Cette fonction permet d'afficher les questions et les réponses possibles du QCM les réponses sont disposées aléatoirement
 
     Args:
         Questions 
@@ -73,6 +56,7 @@ def show_qr():
     
     """ 
     for i in range(len(questions)):
+        questions[i].shuffle()
         print(questions[i][0])
         print("1|", questions[i][1][0][0])
         print("2|", questions[i][1][1][0])
@@ -139,10 +123,8 @@ def main():
     import_file()
 # 2 ) Choix de cotation.
     choix_cotation()
-# 3 ) Shuffle QCM.
-    shuffle()
-# 4 ) Afficher les questions du QCM
-    show_qr()
+# 4 ) Afficher les questions du QCM aléatoires
+    show_qr_shuffled()
 # 5) Correction du QCM.
     correction()
 # 6 )  Sortie du Feedback avec les cotations.
