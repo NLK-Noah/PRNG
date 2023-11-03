@@ -41,6 +41,8 @@ def choix_cotation():
         cotation_antihasard()
     elif x == "toutes" or "4":
         cotation_tout()
+
+# Besoin d'un return pour savoir au niveau du feedback quel cotation on a choisi ? 
                
 
 def show_qr_shuffled():
@@ -56,12 +58,10 @@ def show_qr_shuffled():
     
     """ 
     for i in range(len(questions)):
-        questions[i].shuffle()
-        print(questions[i][0])
-        print("1|", questions[i][1][0][0])
-        print("2|", questions[i][1][1][0])
-        print("3|", questions[i][1][2][0])
-
+    print(questions[i][0])
+    for l in range(len(questions[0][1])):
+        print(l + 1, "|", questions[i][1][l][0])
+        # naffiche que 3 questions 
     
 
 def correction():
@@ -80,13 +80,13 @@ def correction():
     """
     def correction_cool():
         count_cool == 0
-        for i in range(#questions):
-            if #reponse == list[i]:
+        for i in range(len(questions):
+            if input == list[i]:
                 count_cool += 1
     def correction_severe():
         count_severe == 0
-        for i in range(#questions)
-            if #reponse == list[i]:
+        for i in range(len(questions)
+            if input == list[i]:
                 count_severe += 1
             else:
                 count_severe -= 1
@@ -114,7 +114,10 @@ def feedback():
         return le feedback de la question mauvaise 
             
     """
-    
+    for i in range(len(questions)):
+    print(questions[i][0])
+    for l in range(len(questions[0][1])):
+        print(questions[i][1][l][2])
 
 
 def main():
