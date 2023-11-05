@@ -62,6 +62,7 @@ def show_qr_shuffled():
     for l in range(len(questions[0][1])):
         print(l + 1, "|", questions[i][1][l][0])
         # naffiche que 3 questions 
+    correction()
     
 
 def correction():
@@ -100,6 +101,8 @@ def correction():
         print("Cotation 'Sévère':",count_severe)
         correction_anti_hasard()
         print("Cotation 'Anti_Hasard':",count_noluck)
+
+    feedback()
 
 def feedback():
     """Permet d'avoir un feedback
