@@ -57,11 +57,15 @@ def show_qr_shuffle():
             Les questions et les réponses possibles
     
     """ 
+   questions = qcm.build_questionnaire("QCM.txt")
+    random.shuffle(questions)
     for i in range(len(questions)):
+        random.shuffle(questions[i][1])
         print(str(i + 1), questions[i][0])
         for l in range(len(questions[i][1])):
             print(str(l + 1), "|", questions[i][1][l][0])
-        x = int(input("Entrez Votre Réponse:"))
+        x = input("Entrez Votre Réponse:")
+
 
 
 
