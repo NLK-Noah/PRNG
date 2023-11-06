@@ -32,7 +32,7 @@ def choix_cotation():
     """
     print("Choisissez votre méthode de cotation:\n1| Cool.\n2| Sévère.\n3| Anti-Hasard.\n4| Toutes.") #Affiche les diffférents types de cotations
     cotation = input("Entrez votre méthode de cotation:")
-    x = cotation.lower() #Force l'input à être en minuscule pour éviter les erreurs 
+    x = cotation.lower() 
     if x == "cool" or "1":
         cotation_cool()
     elif x == "severe" or "sévere" or "sevère" or "sévère" or "2":
@@ -45,7 +45,7 @@ def choix_cotation():
 # Besoin d'un return pour savoir au niveau du feedback quel cotation on a choisi ? 
                
 
-def show_qr():
+def show_qr_shuffle():
     """Permet d'afficher les questions
 
     Cette fonction permet d'afficher les questions et les réponses possibles du QCM les réponses sont disposées aléatoirement
@@ -61,7 +61,7 @@ def show_qr():
         print(str(i + 1), questions[i][0])
         for l in range(len(questions[i][1])):
             print(str(l + 1), "|", questions[i][1][l][0])
-        x = input("Entrez Votre Réponse:")
+        x = int(input("Entrez Votre Réponse:"))
 
 
 
@@ -125,7 +125,7 @@ def feedback():
         print(str(i + 1), questions[i][0])
     for l in range(len(questions[i][1])):
         print(questions[i][1][l][2])
-
+#On sait juste l'afficher
 
 def main():
     
@@ -134,7 +134,7 @@ def main():
 # 2 ) Choix de cotation.
     choix_cotation()
 # 4 ) Afficher les questions du QCM aléatoires
-    show_qr_shuffled()
+    show_qr_shuffle()
 # 5) Correction du QCM.
     correction()
 # 6 )  Sortie du Feedback avec les cotations.
