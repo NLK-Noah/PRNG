@@ -58,11 +58,12 @@ def show_qr_shuffled():
     
     """ 
     for i in range(len(questions)):
-    print(questions[i][0])
-    for l in range(len(questions[0][1])):
-        print(l + 1, "|", questions[i][1][l][0])
-        # naffiche que 3 questions 
-    correction()
+        print(str(i + 1), questions[i][0])
+        for l in range(len(questions[i][1])):
+            print(str(l + 1), "|", questions[i][1][l][0])
+
+
+
     
 
 def correction():
