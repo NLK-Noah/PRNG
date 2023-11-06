@@ -13,9 +13,10 @@ def import_file(x):
             Le QCM desiré
 
     """
-    filename = input("Choose file:")
-    questions = qcm.build_questionnaire(filename) 
-    return questions
+    
+    filename = input("Choisir votre fichier:")
+    questions = qcm.build_questionnaire(filename)
+    print("REPONDEZ UNIQUEMENT PAR LE NUMERO DE LA QUESTION EST NON LA REPONSE !")
     
 
 def choix_cotation():
@@ -41,6 +42,7 @@ def choix_cotation():
         cotation_antihasard()
     elif x == "toutes" or "4":
         cotation_tout()
+    
 
 # Besoin d'un return pour savoir au niveau du feedback quel cotation on a choisi ? 
                
@@ -57,14 +59,14 @@ def show_qr_shuffle():
             Les questions et les réponses possibles
     
     """ 
-   questions = qcm.build_questionnaire("QCM.txt")
+    questions = qcm.build_questionnaire("QCM.txt")
     random.shuffle(questions)
     for i in range(len(questions)):
         random.shuffle(questions[i][1])
         print(str(i + 1), questions[i][0])
         for l in range(len(questions[i][1])):
             print(str(l + 1), "|", questions[i][1][l][0])
-        x = input("Entrez Votre Réponse:")
+        y = input("Entrez Votre Réponse:")
 
 
 
