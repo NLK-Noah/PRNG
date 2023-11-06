@@ -45,7 +45,7 @@ def choix_cotation():
 # Besoin d'un return pour savoir au niveau du feedback quel cotation on a choisi ? 
                
 
-def show_qr_shuffled():
+def show_qr():
     """Permet d'afficher les questions
 
     Cette fonction permet d'afficher les questions et les réponses possibles du QCM les réponses sont disposées aléatoirement
@@ -61,6 +61,7 @@ def show_qr_shuffled():
         print(str(i + 1), questions[i][0])
         for l in range(len(questions[i][1])):
             print(str(l + 1), "|", questions[i][1][l][0])
+        x = input("Entrez Votre Réponse:")
 
 
 
@@ -118,9 +119,11 @@ def feedback():
         return le feedback de la question mauvaise 
             
     """
+    print("")
+    print("Session Feedback:")
     for i in range(len(questions)):
-    print(questions[i][0])
-    for l in range(len(questions[0][1])):
+        print(str(i + 1), questions[i][0])
+    for l in range(len(questions[i][1])):
         print(questions[i][1][l][2])
 
 
