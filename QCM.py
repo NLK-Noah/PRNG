@@ -14,7 +14,7 @@ def import_file(x):
 
     """
     filename = input("Choose file:")
-    questions = qcm.build_questionnaire(filename) #sérieuc ça marche juste comme ça ???????
+    questions = qcm.build_questionnaire(filename) 
     return questions
     
 
