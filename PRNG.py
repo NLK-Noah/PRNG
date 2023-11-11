@@ -1,7 +1,7 @@
 from qcm import build_questionnaire
 import random
 
-questions = [] # on initialise la liste de question 
+questions = []  # on initialise la liste de question
 
 
 def import_file():
@@ -16,21 +16,26 @@ def import_file():
             Le QCM desiré
 
     """
-    while True: # ici  je rajoute une while true si jamais l user se trompe lors qui choisit son fichier il a autant de chance qu il veut tant que son fichier n'a pas été trouvé
-            try:
-                filename = input("Choisir votre fichier:")
-                questions = build_questionnaire(filename)
-                print(
-                    "REPONDEZ UNIQUEMENT PAR LE NUMERO DE LA QUESTION EST NON LA REPONSE !\nENTRER DEUX FOIS LA MÊME RÉPONSE VOU PÉNALISERA !"
-                )
-                return questions
-                break  # Sortir de la boucle si le fichier est trouvé avec succès
-            except FileNotFoundError:
-                    print("Le fichier n'a pas été trouvé. Veuillez réessayer.")
+    while (
+        True
+    ):  # ici  je rajoute une while true si jamais l user se trompe lors qui choisit son fichier il a autant de chance qu il veut tant que son fichier n'a pas été trouvé
+        try:
+            filename = input("Choisir votre fichier:")
+            questions = build_questionnaire(filename)
+            print(
+                "\033[91m"
+                + "REPONDEZ UNIQUEMENT PAR LE NUMERO DE LA QUESTION ET NON LA REPONSE !\nENTRER DEUX FOIS LA MÊME RÉPONSE VOUS PÉNALISERA !\n PS: Vous êtes obligé de répondre autant de fois que le nombre de bonne réponses"
+                + "\033[0m"
+            )
+            return questions
+            break  # Sortir de la boucle si le fichier est trouvé avec succès
+        except FileNotFoundError:
+            print("Le fichier n'a pas été trouvé. Veuillez réessayer.")
 
-    
 
-questions=import_file()
+questions = import_file()
+
+
 def choix_cotation(questions):
     """Permet de choisir un choix de Cotation
 
@@ -73,8 +78,8 @@ def choix_cotation(questions):
                 elif questions[i][1][answer - 1][1] is False:
                     count_cool -= 1
                 liste.append(answer)
-        print("VOTRE RESULTAT EST DE")
-        print(count_cool)
+        print("Selon la cotation cool votre notes est de:", count_cool)
+
     elif x == "severe" or x == "sévere" or x == "sevère" or x == "sévère" or x == "2":
         list_answers = []
         count_svr = 0
@@ -95,11 +100,9 @@ def choix_cotation(questions):
                     print("Vous avez déja entré cette réponse dommage...")
                 elif questions[i][1][answer - 1][1] is True:
                     count_svr += 1
-                elif questions[i][1][answer - 1][1] is False:
-                    count_svr -= 1
                 liste.append(answer)
-        print("VOTRE RESULTAT EST DE")
-        print(count_svr)
+        print("Selon la cotation sévère votre notes est de:", count_svr)
+
     elif x == "toutes" or x == "4":
         list_answers = []
         count_cool = 0
@@ -125,13 +128,8 @@ def choix_cotation(questions):
                 else:
                     count_svr -= 1
                 liste.append(answer)
-        print("VOTRE RESULTAT POUR LA COOL")
-        print(count_cool)
-        print("VOTRE RESULTAT POUR LA SEVERE")
-        print(count_svr)
-
-
-# On sait juste l'afficher
+        print("Selon la cotation cool votre notes est de:", count_cool)
+        print("Selon la cotation sévère votre notes est de:", count_svr)
 
 
 def main():
@@ -140,5 +138,5 @@ def main():
     choix_cotation(questions)
 
 
-if __name__ == "__main__": # excutation du code 
+if __name__ == "__main__":  # excutation du code
     main()
