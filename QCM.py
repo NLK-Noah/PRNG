@@ -35,13 +35,13 @@ def choix_cotation():
     cotation = input("Entrez votre méthode de cotation:")
     x = cotation.lower() 
     if x == "cool" or "1":
-        cotation_cool()
+        correction_cool()
     elif x == "severe" or "sévere" or "sevère" or "sévère" or "2":
-        cotation_severe()
+        correction_severe()
     elif x == "antihasard" or "anti-hasard" or "anti hasard" or "anti_hasard" or "3":
-        cotation_antihasard()
+        correction_antihasard()
     elif x == "toutes" or "4":
-        cotation_tout()
+        correction_tout()
     
 
 # Besoin d'un return pour savoir au niveau du feedback quel cotation on a choisi ? 
@@ -59,16 +59,31 @@ def show_qr_shuffle():
             Les questions et les réponses possibles
     
     """ 
+    list_answers = []
+    count = 0
+    # Boucle Qui Affiche les Questions et Shuffle leurs réponses
     for i in range(len(questions)):
         random.shuffle(questions[i][1])
-        print("------------", "|", str(i + 1), "|", questions[i][0], "------------")
+        print("-----", "\t", str(i + 1), "|", questions[i][0], "\t", "-----")
+        compte = 0
+        liste = []
+        # Boucle Qui Affiche les réponses et permet de savoir combien il y à de réponses correctes 
         for l in range(len(questions[i][1])):
-            list = []
             print("\n", "\t", str(l + 1), "|", questions[i][1][l][0])
-         y = int(input("Entrez combien de réponses vous allez insérer:"))
-        for i in range(y):
-            z = int(input("Entrez votre réponse:"))
-            list.append(z)
+            if questions[i][1][l][1] is True:
+                compte += 1
+        # Boucle qui permet de répondre autant de fois qu'il y a de réponses correctes
+        for z in range(compte):
+            answer = int(input("Entrez le n° de votre réponse:"))
+            list_answers.append(answer)
+            print(liste)
+            if answer in liste:
+                print("Vous avez déja entré cette réponse dommage...")
+            elif questions[i][1][answer - 1][1] is True:
+                count += 1
+            else:
+                choix_cotation()
+            liste.append(answer)
 
 
 
@@ -90,17 +105,9 @@ def correction():
         
     """
     def correction_cool():
-        count_cool == 0
-        for i in range(len(questions):
-            if input == list[i]:
-                count_cool += 1
+        count += 0
     def correction_severe():
-        count_severe == 0
-        for i in range(len(questions)
-            if input == list[i]:
-                count_severe += 1
-            else:
-                count_severe -= 1
+        count -= 1
     def correction_anti_hasard():
          count_noluck == 0
 
