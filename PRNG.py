@@ -1,7 +1,7 @@
 from qcm import build_questionnaire
 import random
 
-questions = []
+questions = [] # on initialise la liste de question 
 
 
 def import_file():
@@ -16,15 +16,22 @@ def import_file():
             Le QCM desiré
 
     """
-    filename = input("Choisir votre fichier:")
-    questions = build_questionnaire(filename)
-    print(
-        "REPONDEZ UNIQUEMENT PAR LE NUMERO DE LA QUESTION EST NON LA REPONSE !\nENTRER DEUX FOIS LA MÊME RÉPONSE VOU PÉNALISERA !"
-    )
-    return questions
+    while True: # ici  je rajoute une while true si jamais l user se trompe lors qui choisit son fichier il a autant de chance qu il veut tant que son fichier n'a pas été trouvé
+            try:
+                filename = input("Choisir votre fichier:")
+                questions = build_questionnaire(filename)
+                print(
+                    "REPONDEZ UNIQUEMENT PAR LE NUMERO DE LA QUESTION EST NON LA REPONSE !\nENTRER DEUX FOIS LA MÊME RÉPONSE VOU PÉNALISERA !"
+                )
+                return questions
+                break  # Sortir de la boucle si le fichier est trouvé avec succès
+            except FileNotFoundError:
+                    print("Le fichier n'a pas été trouvé. Veuillez réessayer.")
 
+    
 
-def choix_cotation():
+questions=import_file()
+def choix_cotation(questions):
     """Permet de choisir un choix de Cotation
 
     Cette fontion permet de choisir une méthode de cotation parmi les suivantes: 1| Cool, 2| Sévère, 3| Anti-Hasard, 4| Toutes
@@ -40,7 +47,7 @@ def choix_cotation():
     print(
         "Choisissez votre méthode de cotation:\n1| Cool.\n2| Sévère.\n3| Anti-Hasard.\n4| Toutes."
     )  # Affiche les diffférents types de cotations
-    cotation = str(input("Entrez votre méthode de cotation:"))
+    cotation = input("Entrez votre méthode de cotation:")
     x = cotation.lower()
 
     if x == "cool" or x == "1":
@@ -66,6 +73,7 @@ def choix_cotation():
                 elif questions[i][1][answer - 1][1] is False:
                     count_cool -= 1
                 liste.append(answer)
+        print("VOTRE RESULTAT EST DE")
         print(count_cool)
     elif x == "severe" or x == "sévere" or x == "sevère" or x == "sévère" or x == "2":
         list_answers = []
@@ -90,6 +98,7 @@ def choix_cotation():
                 elif questions[i][1][answer - 1][1] is False:
                     count_svr -= 1
                 liste.append(answer)
+        print("VOTRE RESULTAT EST DE")
         print(count_svr)
     elif x == "toutes" or x == "4":
         list_answers = []
@@ -116,7 +125,9 @@ def choix_cotation():
                 else:
                     count_svr -= 1
                 liste.append(answer)
+        print("VOTRE RESULTAT POUR LA COOL")
         print(count_cool)
+        print("VOTRE RESULTAT POUR LA SEVERE")
         print(count_svr)
 
 
@@ -124,11 +135,10 @@ def choix_cotation():
 
 
 def main():
-    # 1) Integrer le QCM.
-    import_file()
+    # 1) Integrer le QCM qui est direcement faites lors du lancement de choix_cotation(questions)
     # 2 ) Choix de cotation.
-    choix_cotation()
+    choix_cotation(questions)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": # excutation du code 
     main()
