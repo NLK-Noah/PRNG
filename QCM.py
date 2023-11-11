@@ -16,7 +16,7 @@ def import_file(x):
     
     filename = input("Choisir votre fichier:")
     questions = qcm.build_questionnaire(filename)
-    print("REPONDEZ UNIQUEMENT PAR LE NUMERO DE LA QUESTION EST NON LA REPONSE !")
+    print("REPONDEZ UNIQUEMENT PAR LE NUMERO DE LA QUESTION EST NON LA REPONSE !\nENTRER DEUX FOIS LA MÊME RÉPONSE VOU PÉNALISERA !")
     
 
 def choix_cotation():
