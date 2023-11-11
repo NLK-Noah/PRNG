@@ -1,7 +1,7 @@
 import qcm
 import random
 
-def import_file(x):
+def import_file():
     """Permet d'importer le QCM
 
     Cette Fonction importe le QCM desiré 
@@ -154,5 +154,5 @@ def main():
     correction()
 # 6 )  Sortie du Feedback avec les cotations.
     feedback()
-#if __name__ == "__main__":
-main()
+if __name__ == "__main__":
+    main()
