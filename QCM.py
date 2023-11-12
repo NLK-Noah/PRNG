@@ -59,6 +59,7 @@ def opti_quest(questions):
     list_nbre_qst = []
     list_true = []
     liste_true2 = []
+    list_false = []
     count_cool = 0
     count_svr = 0
     count_noluck = 0
@@ -71,30 +72,32 @@ def opti_quest(questions):
         count_true = 0
         liste = []
         count_question += 1
+        compte_false = 0
         # Boucle de longueur égale au nombre de réponses
         for l in range(len(questions[i][1])):
             print("\n", "\t", str(l + 1), "|", questions[i][1][l][0])
-
             if questions[i][1][l][1] is True:
                 compte += 1
                 list_true.append(count_true)
                 count_true += 1
             else:
                 count_true += 1
+            if questions[i][1][l][1] is False:
+                compte_false += 1
+        list_false.append(compte_false)
         liste_true2.append(compte)
+
         for z in range(compte):
             answer = int(input("Entrez le n° de votre réponse:"))
-
             if answer in liste:
                 print("Vous avez déja entré cette réponse dommage...")
-
             elif questions[i][1][answer - 1][1] is True:
                 count_cool += 1
                 count_svr += 1
                 count_noluck += 1
-
             else:
                 count_svr -= 1
+                count_noluck -= liste_true2[i] / list_false[i]
                 list_feedback.append(answer)
                 list_nbre_qst.append(count_question)
             liste.append(answer)
@@ -112,7 +115,6 @@ def opti_quest(questions):
         print("Selon la cotation COOL votre notes est de:", count_cool)
         print("Selon la cotation SEVERE votre notes est de:", count_svr)
         print("Selon la correction ANTI-TRICHE votre note est de:", count_noluck)
-
 
     for t in range(len(list_feedback)):
         print(
