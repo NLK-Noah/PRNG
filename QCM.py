@@ -113,8 +113,6 @@ def opti_quest(questions):
         print("Selon la cotation SEVERE votre notes est de:", count_svr)
         print("Selon la correction ANTI-TRICHE votre note est de:", count_noluck)
 
-    print("list_true", list_true)
-    print("liste_true2", liste_true2)
 
     for t in range(len(list_feedback)):
         print(
