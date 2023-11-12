@@ -64,6 +64,7 @@ def opti_quest(questions):
     count_svr = 0
     count_noluck = 0
     count_question = -1
+    count_t = 0
     # Boucle de longueur égale au nombre de questions
     for i in range(len(questions)):
         random.shuffle(questions[i][1])
@@ -80,6 +81,7 @@ def opti_quest(questions):
                 compte += 1
                 list_true.append(count_true)
                 count_true += 1
+                count_t += 1
             else:
                 count_true += 1
             if questions[i][1][l][1] is False:
@@ -103,21 +105,31 @@ def opti_quest(questions):
             liste.append(answer)
 
     if x == "cool" or x == "1":
-        print("Selon la cotation cool votre notes est de:", count_cool)
+        print("Selon la cotation cool votre notes est de:", count_cool, "/", count_t)
 
     elif x == "severe" or x == "sévere" or x == "sevère" or x == "sévère" or x == "2":
-        print("Selon la cotation sévère votre notes est de:", count_svr)
+        print("Selon la cotation sévère votre notes est de:", count_svr, "/", count_t)
 
     elif x == "anti-hasard" or x == "3":
-        print("Selon la correction ANTI-TRICHE votre note est de:", count_noluck)
+        print(
+            "Selon la correction ANTI-TRICHE votre note est de:",
+            count_noluck,
+            "/",
+            count_t,
+        )
 
     elif x == "toutes" or x == "4":
-        print("Selon la cotation COOL votre notes est de:", count_cool)
-        print("Selon la cotation SEVERE votre notes est de:", count_svr)
-        print("Selon la correction ANTI-TRICHE votre note est de:", count_noluck)
+        print("Selon la cotation COOL votre notes est de:", count_cool, "/", count_t)
+        print("Selon la cotation SEVERE votre notes est de:", count_svr, "/", count_t)
+        print(
+            "Selon la correction ANTI-TRICHE votre note est de:",
+            count_noluck,
+            "/",
+            count_t,
+        )
 
     for t in range(len(list_feedback)):
-        print(
+        print(-
             "Vous vous êtes trompés aux questions:\n",
             questions[list_nbre_qst[t]][0],
             "\t",
