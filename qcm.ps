@@ -4,8 +4,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
-
-\title{Rappport OptiQuest}
+\title{Projet OptiQuest}
 \author{Noah Moussaoui Nizar Eljihad Kobe Van Den Brill }
 \date{ 10 November 2023}
 
@@ -19,7 +18,7 @@
 
 \section{Introduction}
 Nous avons travaillé sur un projet que nous avons intitulé le projet OptiQuest.
-OptiQuest est un programme qui réponds à la demande de notre client. Nous avons été 3 personnes a travaillé en collaboration sur OptiQuest. Le projet a duré 1 mois et voici notre rapport expliquant comment marche  OptiQuest quels sont ses qualités et ses défauts. 
+OptiQuest est un programme qui réponds à la demande de notre client. Nous avons été 3 personnes  travaillé en collaboration sur OptiQuest. Le projet a duré 1 mois et voici notre rapport expliquant comment marche  OptiQuest quels sont ses qualités et ses défauts. 
 
 \section{Context}
 Dans le cadre de l'APP2 du cours LSINC1001 . Nous avons été contacter par un client qui souhaitait avoir un qcm automatisé en python avec certaines conditions spécifiés lors d'une réunion primitif avant le lancement de OptiQuest qui se retrouve plus tard dans ce rapport. Ce projet que nous avons donc appellé OptiQuest. Il consiste a crée un QCM intéractif dans le  terminal de commande et exécute les questions données dans un fichier .txt choisit au préalable par l'utilisateur.
@@ -27,7 +26,7 @@ Dans le cadre de l'APP2 du cours LSINC1001 . Nous avons été contacter par un c
 \section{Les outils utilisés}
 Nous avons utilisé l'outil GITHUB pour le partage de notre programme ainsi que ses avancées et et ses anciennes versions .Le programme est écrit dans le language informatique qui est Python. Pour la rédaction de ce rapport nous utilisons overleaf pour ce document écrit en LateX et pour nos réunions ou nos moment de co-working en équipe nous utilisons Discord. Les supports de cours ou des recherches sur internet pour nous aidez à faire ce programme nous on été utile dans la réalisation de ce projet.
 
-\section{Les prérequis du client}
+\section{Les prérequis du client}\label{p}
 \begin{enumerate}
     \item Il doit avoir 4 méthodes de cotation qui sont les suivants:
     \begin{enumerate}
@@ -37,10 +36,43 @@ Nous avons utilisé l'outil GITHUB pour le partage de notre programme ainsi que 
         \item Cotation tout: elle éxecute chaque cotation et les compares et donnent un retour à l'utilisateur.
     \end{enumerate}
     
-    \item L'affichage dans le terminal:
-    Le client veut que l'utilisateur puisse choisir au préalable comment il veut etre coté  chaque questions soient afficher à la suite dans le terminal avec la fin un contre rendu de la session de qcm avec les points obtenu et les feedback des réponses mauvaises. 
+    \item L'affichage dans le terminal:\\
+    Le client souhaite offrir à l'utilisateur la possibilité de préalablement choisir sa méthode de cotation. Les questions seront ensuite affichées successivement dans le terminal, suivies d'un récapitulatif de la session de QCM, incluant les points obtenus et les retours sur les réponses incorrectes.
 
 \end{enumerate}
+\section{Optiquest l'histoire}
+Nous avons débuté par une réunion avec le client afin de rédiger un compte rendu détaillé, reflétant les échanges et les requêtes exprimées par le client. Nous avons également présenté des idées novatrices que nous pourrions intégrer à OptiQuest. Par la suite, nous avons établi un cahier des charges  et élaboré un planning pour le projet. Ce dossier a été livré dans les délais impartis et a été accepté par le client, nous permettant ainsi de lancer officiellement le projet OptiQuest le 10 octobre 2023.Nos premiers efforts se sont concentrés sur la conception de la structure du code et son architecture. Par la suite, nous avons élaboré une présentation PPTX pour mettre en avant les progrès réalisés dans le développement d'OptiQuest. Cette démonstration a été partagée avec le client le 10 novembre 2023 et a été bien accueillie et aujpurd'hui nous sommes arrivé à la fin de ce projet et nous rendons OptiQuest dans les délais promit au client.
+
+\section{Comment OptiQuest marche}
+Optiquest marche de façon simple pour l'utilisateur. En tout premier lieu il est demandé à l utilisateur de choisir son fichier de QCM.txt de préférence. Ensuite un message qui comporte les règles:\\
+
+1|REPONDEZ UNIQUEMENT PAR LE NUMERO DE LA QUESTION ET NON LA REPONSE !
+2|ENTRER DEUX FOIS LA MÊME RÉPONSE VOUS PÉNALISERA OU PAS SELON LE CHOIX DE COTATION !
+ PS: Vous êtes obligé de répondre autant de fois que le nombre de bonne réponses\\
+
+Ensuite il est demandé à l'utilisateur de rentré j'accepte pour accepter ces règles sinon il ne peut pas lancer le programme et sera dans l'incapacité d'y répondre et devra relancer le programme.
+pour accepter les règles par la suite il pourra participer au QCM. Il arrive à l étape de choisir sa méthode de cotation entre:
+\begin{enumerate}
+    \item Cotation cool
+    \item Cotation sévère
+    \item Cotation anti-hasard
+    \item Cotation Tout
+\end{enumerate}
+leurs fonctions sont noté ci-dessus dans ce rapport  dans la section << Les prérequis du client>>.\\
+
+Par la suite l'utilisateur doit répondre aux questions en entranr les numéros des reponses qui soit donner comme réponse à la question. Il faut savoir que OptiQuest calcul à l'avance le nombre de bonne réponse et propose donc à l'utilisateur de rentré autant de réponses qu il y a des bonnes celon le calcul établit par Optiquest. Pour finir à la fin des séances de questions l'utilisateur reçoit un contre rendu de ses points celon la méthode de cotation choisit et les réponses ou il a eu mauvais ainsi que un feedback . 
+
+\section{Le code de OptiQuest}
+
+\section{Le groupe}
+Notre groupe a été un peu mouvementé comme expliquer lors de notre présentation devant le client. Mais pour les 2 restants la communication été l'un de notre plus grand point fort chacun apportant ses connaissances à OptiQuest que ça soit question Programme ou UI et UX. Des rendez-vous journalier respecter ainsi que des contrendu hebdomadaire. Des explications claire et facile a comprendre pour l autre.
+
+
+\section{Conclusion}
+Pour conclure ce rapport et le projet OptiQuest. Nous sommes fier d'avoir réaliser cela en si peut de temps et en très petit comité. Ce projet nous à permit à solutionner des problèmes qui nous semblait presque impossible il y a 1 mois mais la persévérence , l'étude et la persévérence nous a permit de finir OptiQuest en très peut dedans et de même se pencher sur l'UX et l'UI et aussi lui ajouter des fonctionalité 
+
+
+
 
 
 \end{document}
