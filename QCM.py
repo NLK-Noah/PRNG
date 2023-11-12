@@ -33,7 +33,7 @@ def import_file():
             print("Le fichier n'a pas été trouvé. Veuillez réessayer.")
 
 
-questions = import_file()
+
 
 
 def opti_quest(questions):
@@ -142,6 +142,7 @@ def opti_quest(questions):
 
 def main():
     # 1) Integrer le QCM qui est direcement faites lors du lancement de choix_cotation(questions)
+    questions = import_file()
     # 2 ) Choix de cotation.
     opti_quest(questions)
 
