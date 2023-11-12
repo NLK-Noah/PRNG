@@ -41,7 +41,7 @@ Nous avons utilisé l'outil GITHUB pour le partage de notre programme ainsi que 
 
 \end{enumerate}
 \section{Optiquest l'histoire}
-Nous avons débuté par une réunion avec le client afin de rédiger un compte rendu détaillé, reflétant les échanges et les requêtes exprimées par le client. Nous avons également présenté des idées novatrices que nous pourrions intégrer à OptiQuest. Par la suite, nous avons établi un cahier des charges  et élaboré un planning pour le projet. Ce dossier a été livré dans les délais impartis et a été accepté par le client, nous permettant ainsi de lancer officiellement le projet OptiQuest le 10 octobre 2023.Nos premiers efforts se sont concentrés sur la conception de la structure du code et son architecture. Par la suite, nous avons élaboré une présentation PPTX pour mettre en avant les progrès réalisés dans le développement d'OptiQuest. Cette démonstration a été partagée avec le client le 10 novembre 2023 et a été bien accueillie et aujpurd'hui nous sommes arrivé à la fin de ce projet et nous rendons OptiQuest dans les délais promit au client.
+Nous avons débuté par une réunion avec le client afin de rédiger un compte rendu détaillé, reflétant les échanges et les requêtes exprimées par le client. Nous avons également présenté des idées novatrices que nous pourrions intégrer à OptiQuest. Nous avons divisé le problème en plusieurs problémes (sous-fonctions).Par la suite, nous avons établi un cahier des charges  et élaboré un planning pour le projet. Ce dossier a été livré dans les délais impartis et a été accepté par le client, nous permettant ainsi de lancer officiellement le projet OptiQuest le 10 octobre 2023.Nos premiers efforts se sont concentrés sur la conception de la structure du code et son architecture. Par la suite, nous avons élaboré une présentation PPTX pour mettre en avant les progrès réalisés dans le développement d'OptiQuest. Cette démonstration a été partagée avec le client le 10 novembre 2023 et a été bien accueillie et aujpurd'hui nous sommes arrivé à la fin de ce projet et nous rendons OptiQuest dans les délais promit au client.
 
 \section{Comment OptiQuest marche}
 Optiquest marche de façon simple pour l'utilisateur. En tout premier lieu il est demandé à l utilisateur de choisir son fichier de QCM.txt de préférence. Ensuite un message qui comporte les règles:\\
@@ -63,16 +63,38 @@ leurs fonctions sont noté ci-dessus dans ce rapport  dans la section << Les pr�
 Par la suite l'utilisateur doit répondre aux questions en entranr les numéros des reponses qui soit donner comme réponse à la question. Il faut savoir que OptiQuest calcul à l'avance le nombre de bonne réponse et propose donc à l'utilisateur de rentré autant de réponses qu il y a des bonnes celon le calcul établit par Optiquest. Pour finir à la fin des séances de questions l'utilisateur reçoit un contre rendu de ses points celon la méthode de cotation choisit et les réponses ou il a eu mauvais ainsi que un feedback . 
 
 \section{Le code de OptiQuest}
+OptiQuest est crée  en 2 fonctions:\\
+\begin{enumerate}
+    \item La fonction importfile()
+        \begin{enumerate}
+            \item elle permet à l'utilisateur de choisir le QCM au quel il souhaite répondre.
+            \item elle permet d'aller lire dans le fichier QCM.txt ou QCM2.txt et de ressortit de la les questions et les réponses dont on a besoin grace à une fonction nattif au fichier qcm.py buildquestionnaire(filename).
+        \end{enumerate}
+    \item Optiquest(questions)
+       Cette fonction est un enssemble de sous-fonctions qui par soucis de compilation à du se retrouver toutes au seins de la même fonction car elle partage des variables globales.
+        \begin{enumerate}
+            \item Elle permet de choisir la méthode de cotation.
+            \item Initialisation des listes de réponses True ou False ainsi que la liste de la réponse aussi initialisation des compteurs de points.
+            \item Elle affiche question par question et calcul question par question un nouveau compteur celon les réponses de l'utilisateur.
+            \item Elle affiche les points obtenu ( le compteur final) par l'utilisateur durant la séance de QCM ainsi q'un feedback pour les mauvaises réponses 
+        \end{enumerate}
+\end{enumerate}
+Toutes ces fonctions sont appellées dans la fonctionn  main qui est celle qui éxécute le programme.
 
 \section{Le groupe}
-Notre groupe a été un peu mouvementé comme expliquer lors de notre présentation devant le client. Mais pour les 2 restants la communication été l'un de notre plus grand point fort chacun apportant ses connaissances à OptiQuest que ça soit question Programme ou UI et UX. Des rendez-vous journalier respecter ainsi que des contrendu hebdomadaire. Des explications claire et facile a comprendre pour l autre.
+Notre groupe a été un peu mouvementé comme expliquer lors de notre présentation devant le client. Mais pour les 2 restants dans le groupe  la communication  a été l'un de notre plus grand point fort chacun apportant ses connaissances à OptiQuest que ça soit dans le dommaine programme ou UI et UX. Des rendez-vous journalier respecter ainsi que des contrendu hebdomadaire. Des explications claire et facile a comprendre pour l autre. Notre amitié a été plus que un point bénéfique à ce projet la connaissance de l'autre et les activités hors projet nous assemble et nous permette de réussir à régler des problèmes de plus en plus compliqué.
 
 
 \section{Conclusion}
-Pour conclure ce rapport et le projet OptiQuest. Nous sommes fier d'avoir réaliser cela en si peut de temps et en très petit comité. Ce projet nous à permit à solutionner des problèmes qui nous semblait presque impossible il y a 1 mois mais la persévérence , l'étude et la persévérence nous a permit de finir OptiQuest en très peut dedans et de même se pencher sur l'UX et l'UI et aussi lui ajouter des fonctionalité 
+Pour conclure, ce rapport et le projet OptiQuest. Nous sommes très fier d'avoir réaliser cela en si peut de temps et en très petit comité. Ce projet nous à permit à solutionner des problèmes qui nous semblait presque impossible il y a près de 1 mois mais la persévérence , l'étude  nous a permit de finir OptiQuest en très peut dedans et de même se pencher sur l'UX et l'UI et aussi lui ajouter des fonctionalité. \\
 
+
+
+
+\author{Noah Moussaoui Nizar Eljihad Kobe Van Den Brill }
 
 
 
 
 \end{document}
+
