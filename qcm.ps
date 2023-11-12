@@ -5,7 +5,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
 \title{Projet OptiQuest}
-\author{Noah Moussaoui Nizar Eljihad Kobe Van Den Brill }
+\author{Noah Moussaoui Nizar El Jihad Kobe Van Den Brill }
 \date{ 10 November 2023}
 
 \begin{document}
@@ -18,22 +18,22 @@
 
 \section{Introduction}
 Nous avons travaillé sur un projet que nous avons intitulé le projet OptiQuest.
-OptiQuest est un programme qui réponds à la demande de notre client. Nous avons été 3 personnes  travaillé en collaboration sur OptiQuest. Le projet a duré 1 mois et voici notre rapport expliquant comment marche  OptiQuest quels sont ses qualités et ses défauts. 
+OptiQuest est un programme qui réponds à la demande de notre client. Nous avons été 3 personnes  travaillé en collaboration sur OptiQuest. Le projet a duré 1 mois et voici notre rapport expliquant comment fonctionne OptiQuest quelles sont ses qualités et ses défauts. 
 
 \section{Context}
-Dans le cadre de l'APP2 du cours LSINC1001 . Nous avons été contacter par un client qui souhaitait avoir un qcm automatisé en python avec certaines conditions spécifiés lors d'une réunion primitif avant le lancement de OptiQuest qui se retrouve plus tard dans ce rapport. Ce projet que nous avons donc appellé OptiQuest. Il consiste a crée un QCM intéractif dans le  terminal de commande et exécute les questions données dans un fichier .txt choisit au préalable par l'utilisateur.
+Dans le cadre de l'APP2 du cours LSINC1001 . Nous avons été contactés par un client qui souhaitait avoir un qcm automatisé en python avec certaines conditions spécifiés lors d'une réunion primitif avant le lancement de OptiQuest qui se retrouve plus tard dans ce rapport. Ce projet que nous avons donc appellé OptiQuest. Il consiste a crée un QCM intéractif dans le  terminal de commande et exécute les questions données dans un fichier .txt choisit au préalable par l'utilisateur.
 
 \section{Les outils utilisés}
-Nous avons utilisé l'outil GITHUB pour le partage de notre programme ainsi que ses avancées et et ses anciennes versions .Le programme est écrit dans le language informatique qui est Python. Pour la rédaction de ce rapport nous utilisons overleaf pour ce document écrit en LateX et pour nos réunions ou nos moment de co-working en équipe nous utilisons Discord. Les supports de cours ou des recherches sur internet pour nous aidez à faire ce programme nous on été utile dans la réalisation de ce projet.
+Nous avons utilisé l'outil GITHUB pour le partage de notre programme ainsi que ses avancées et de ses anciennes versions .Le programme est écrit dans le language informatique qui est Python. Pour la rédaction de ce rapport nous utilisons overleaf pour ce document écrit en LateX et pour nos réunions ou nos moment de co-working en équipe nous utilisons Discord. Les supports de cours ou des recherches sur internet  nous ont été utile dans la réalisation de ce projet.
 
 \section{Les prérequis du client}\label{p}
 \begin{enumerate}
-    \item Il doit avoir 4 méthodes de cotation qui sont les suivants:
+    \item Il doit avoir 4 méthodes de cotation qui sont les suivantes:
     \begin{enumerate}
         \item Cotation cool: elle compte 1 point si la réponse est correcte et 0 si la réponse est mauvaise.
         \item Cotation sévère: elle compte 1 point si la réponse est correct et -1 si la réponse est mauvaise.
-        \item Cotation anti-hasard: elle est compte les points celon la valeur de la question.
-        \item Cotation tout: elle éxecute chaque cotation et les compares et donnent un retour à l'utilisateur.
+        \item Cotation anti-hasard: elle est compte les points selon la valeur de la question.
+        \item Cotation tout: elle éxecute chaque cotation et les compares en donnant un retour à l'utilisateur.
     \end{enumerate}
     
     \item L'affichage dans le terminal:\\
@@ -50,17 +50,17 @@ Optiquest marche de façon simple pour l'utilisateur. En tout premier lieu il es
 2|ENTRER DEUX FOIS LA MÊME RÉPONSE VOUS PÉNALISERA OU PAS SELON LE CHOIX DE COTATION !
  PS: Vous êtes obligé de répondre autant de fois que le nombre de bonne réponses\\
 
-Ensuite il est demandé à l'utilisateur de rentré j'accepte pour accepter ces règles sinon il ne peut pas lancer le programme et sera dans l'incapacité d'y répondre et devra relancer le programme.
-pour accepter les règles par la suite il pourra participer au QCM. Il arrive à l étape de choisir sa méthode de cotation entre:
+Ensuite il est demandé à l'utilisateur d'entrer j'accepte pour accepter ces règles sinon il ne peut pas lancer le programme et sera dans l'incapacité d'y répondre et devra relancer le programme.
+pour accepter les règles par la suite il pourra participer au QCM. Il arrive à l'étape de choix de sa méthode de cotation entre:
 \begin{enumerate}
     \item Cotation cool
     \item Cotation sévère
     \item Cotation anti-hasard
     \item Cotation Tout
 \end{enumerate}
-leurs fonctions sont noté ci-dessus dans ce rapport  dans la section << Les prérequis du client>>.\\
+leurs fonctions sont notées ci-dessus dans ce rapport  dans la section << Les prérequis du client>>.\\
 
-Par la suite l'utilisateur doit répondre aux questions en entranr les numéros des reponses qui soit donner comme réponse à la question. Il faut savoir que OptiQuest calcul à l'avance le nombre de bonne réponse et propose donc à l'utilisateur de rentré autant de réponses qu il y a des bonnes celon le calcul établit par Optiquest. Pour finir à la fin des séances de questions l'utilisateur reçoit un contre rendu de ses points celon la méthode de cotation choisit et les réponses ou il a eu mauvais ainsi que un feedback . 
+Par la suite l'utilisateur doit répondre aux questions en entrant les numéros des reponses qui sont spécifique à la question. Il faut savoir que OptiQuest calcule à l'avance le nombre de bonne réponse et propose donc à l'utilisateur de rentrer autant de réponses qu il y a des bonnes selon le calcul établit par Optiquest. Pour finir à la fin des séances de questions l'utilisateur reçoit un compte rendu de ses points selon la méthode de cotation choisie et les réponses où il a eu mauvais ainsi que un feedback . 
 
 \section{Le code de OptiQuest}
 OptiQuest est crée  en 2 fonctions:\\
@@ -71,27 +71,27 @@ OptiQuest est crée  en 2 fonctions:\\
             \item elle permet d'aller lire dans le fichier QCM.txt ou QCM2.txt et de ressortit de la les questions et les réponses dont on a besoin grace à une fonction nattif au fichier qcm.py buildquestionnaire(filename).
         \end{enumerate}
     \item Optiquest(questions)
-       Cette fonction est un enssemble de sous-fonctions qui par soucis de compilation à du se retrouver toutes au seins de la même fonction car elle partage des variables globales.
+       Cette fonction est un enssemble de sous-fonctions qui par soucis de compilation à du se retrouver toutes au seins de la même fonction car elles partagent des variables globales.
         \begin{enumerate}
             \item Elle permet de choisir la méthode de cotation.
             \item Initialisation des listes de réponses True ou False ainsi que la liste de la réponse aussi initialisation des compteurs de points.
-            \item Elle affiche question par question et calcul question par question un nouveau compteur celon les réponses de l'utilisateur.
-            \item Elle affiche les points obtenu ( le compteur final) par l'utilisateur durant la séance de QCM ainsi q'un feedback pour les mauvaises réponses 
+            \item Elle affiche question par question et calcule question par question un nouveau compteur selon les réponses de l'utilisateur.
+            \item Elle affiche les points obtenus ( le compteur final) par l'utilisateur durant la séance de QCM ainsi q'un feedback pour les mauvaises réponses 
         \end{enumerate}
 \end{enumerate}
 Toutes ces fonctions sont appellées dans la fonctionn  main qui est celle qui éxécute le programme.
 
 \section{Le groupe}
-Notre groupe a été un peu mouvementé comme expliquer lors de notre présentation devant le client. Mais pour les 2 restants dans le groupe  la communication  a été l'un de notre plus grand point fort chacun apportant ses connaissances à OptiQuest que ça soit dans le dommaine programme ou UI et UX. Des rendez-vous journalier respecter ainsi que des contrendu hebdomadaire. Des explications claire et facile a comprendre pour l autre. Notre amitié a été plus que un point bénéfique à ce projet la connaissance de l'autre et les activités hors projet nous assemble et nous permette de réussir à régler des problèmes de plus en plus compliqué.
+Notre groupe a été un peu mouvementé comme expliqué lors de notre présentation devant le client. Mais pour les 2 restants dans le groupe  la communication  a été l'un de notre plus grand point fort chacun apportant ses connaissances à OptiQuest que ça soit dans le dommaine programme ou UI et UX. Des rendez-vous journalier respectés ainsi que des compte rendus hebdomadaires. Des explications claires et faciles a comprendre pour l'autre. Notre amitié a été plus que un point bénéfique à ce projet, la connaissance de l'autre et les activités hors projet nous assemble et nous permette de réussir à régler des problèmes de plus en plus compliqués.
 
 
 \section{Conclusion}
-Pour conclure, ce rapport et le projet OptiQuest. Nous sommes très fier d'avoir réaliser cela en si peut de temps et en très petit comité. Ce projet nous à permit à solutionner des problèmes qui nous semblait presque impossible il y a près de 1 mois mais la persévérence , l'étude  nous a permit de finir OptiQuest en très peut dedans et de même se pencher sur l'UX et l'UI et aussi lui ajouter des fonctionalité. \\
+Pour conclure, ce rapport et le projet OptiQuest. Nous sommes très fiers d'avoir réalisé cela en si peu de temps et en très petit comité. Ce projet nous à permis de solutionner des problèmes qui nous semblaient presque impossible il y a près de 1 mois mais la persévérence , l'étude  nous a permit de finir OptiQuest en très peu de temps et de même se pencher sur l'UX et l'UI et aussi lui ajouter des fonctionalités. \\
 
 
 
 
-\author{Noah Moussaoui Nizar Eljihad Kobe Van Den Brill }
+\author{Noah Moussaoui Nizar El Jihad Kobe Van Den Brill }
 
 
 
