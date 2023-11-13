@@ -45,9 +45,9 @@ def opti_quest(questions):
         "C", étant la méthode de cotation choisie
 
     """
-    t = input("Ecrivez j'accepte pour accepter les règles du QCM:")
+    t = input("Tapez j'accepte ou 1 pour accepter les règles du QCM:")
     y = t.lower()
-    if y == "j'accepte" or y == "jaccepte" or y == "j accepte":
+    if y == "j'accepte" or y == "jaccepte" or y == "j accepte" or y == "1":
         print(
             "Choisissez votre méthode de cotation:\n1| Cool.\n2| Sévère.\n3| Anti-Hasard.\n4| Toutes."
         )  # Affiche les diffférents types de cotations
