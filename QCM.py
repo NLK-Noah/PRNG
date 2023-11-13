@@ -136,10 +136,6 @@ def opti_quest(questions):
                 "/",
                 count_t,
             )
-        print(list_nbre_qst)
-        print(list_feedback)
-        print(list_true)
-        print(liste_true2)
         for t in range(len(list_feedback)):
             print("\n")
             print(
